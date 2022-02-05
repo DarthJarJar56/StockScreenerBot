@@ -59,12 +59,5 @@ async def screen(ctx, arg=None):
         await ctx.send(embed=err2)
         return
     return
-
-
-@client.command()
-async def find(ctx, arg=None):
-    user = await client.fetch_user(arg)
-    await ctx.send(f"@{user.name}#{user.discriminator}")
     
-
 client.run(token)
